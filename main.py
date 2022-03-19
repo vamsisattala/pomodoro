@@ -71,23 +71,23 @@ window = Tk()
 window.title("Pomadoro")
 window.config(padx=100, pady=125, bg=GREEN)
 
-canvas = Canvas(width=203, height=250, bg=GREEN, highlightthickness=0)
+canvas = Canvas(width=203, height=250, bg=GREEN, highlightthickness=0)#png image
 my_tomato = PhotoImage(file="tomato.png")
 canvas.create_image(103, 100, image=my_tomato)
 timer_text = canvas.create_text(103, 115, text="00:00", fill="white", font=(FONT_NAME,30,"bold"))
 canvas.grid(column=1, row=1)
 
-button = Button(text="start", highlightthickness=0, command=start_timer)
+button = Button(text="start", highlightthickness=0, command=start_timer)#start button
 button.grid(column=0, row=3)
 
-label_1= Label(fg=YELLOW, text="Timer", bg=GREEN,font=(FONT_NAME, 50,  "bold"))
+label_1= Label(fg=YELLOW, text="Timer", bg=GREEN,font=(FONT_NAME, 50,  "bold"))#label Timer
 label_1.grid(column=1, row=0)
 
-button2 = Button(text="reset",bg=RED, highlightthickness=0, command=reset_timer)
+button2 = Button(text="reset",bg=RED, highlightthickness=0, command=reset_timer)#reset button
 button2.grid(column=3, row=3)
 
 
-label = Label(fg=RED, bg=GREEN)
+label = Label(fg=RED, bg=GREEN)#i use this label for check mark
 label.grid(column=1, row=3)
 
 window.mainloop()
